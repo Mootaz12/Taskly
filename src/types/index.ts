@@ -13,3 +13,6 @@ export type todo = {
 export type TodoCardPropsType = {
   todo: todo;
 };
+export type UpdateTodoFormProps {
+  todo: todo | null;
+}
