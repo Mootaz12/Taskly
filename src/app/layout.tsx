@@ -19,12 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  min-h-screen `}>
+      <body className={`${inter.className}  min-h-screen flex flex-col  `}>
         <AntdRegistry>
           <Header />
           <main
             className="
-          flex flex-col justify-center items-center"
+          flex flex-col justify-center items-center flex-1"
           >
             {children}
           </main>

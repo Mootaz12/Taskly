@@ -10,6 +10,8 @@ export async function getAlltodos(): Promise<todo[] | null> {
   } catch (error) {
     console.error(error);
     return null;
+  } finally {
+    await prisma.$disconnect();
   }
 }
 export async function getTodo(id: string): Promise<todo | null> {
@@ -18,6 +20,8 @@ export async function getTodo(id: string): Promise<todo | null> {
   } catch (error) {
     console.error(error);
     return null;
+  } finally {
+    await prisma.$disconnect();
   }
 }
 export async function addTodo(data: FormData): Promise<void> {
@@ -47,6 +51,8 @@ export async function updateTodo(data: FormData): Promise<void> {
     });
   } catch (error) {
     console.error(error);
+  } finally {
+    await prisma.$disconnect();
   }
 }
 export async function deleteTodo(id: string): Promise<void> {
